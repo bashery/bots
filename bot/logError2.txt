@@ -1,0 +1,82 @@
+
+[ Sabtu, 26 - 01 - 2019 | 20:39:30 ] name 'helpmsg' is not defined
+[ Sabtu, 26 - 01 - 2019 | 21:12:35 ] list index out of range
+[ Sabtu, 26 - 01 - 2019 | 21:33:37 ] TalkException(code=0, reason='invalid mention.', parameterMap=None)
+[ Minggu, 27 - 01 - 2019 | 05:31:27 ] list index out of range
+[ Minggu, 27 - 01 - 2019 | 21:30:40 ] name 'headers' is not defined
+[ Minggu, 27 - 01 - 2019 | 21:32:25 ] local variable 'self' referenced before assignment
+[ Minggu, 27 - 01 - 2019 | 21:32:42 ] 'Client' object has no attribute 'reply'
+[ Minggu, 27 - 01 - 2019 | 21:59:27 ] local variable 'x' referenced before assignment
+[ Minggu, 27 - 01 - 2019 | 22:02:38 ] local variable 'x' referenced before assignment
+[ Minggu, 27 - 01 - 2019 | 22:07:36 ] local variable 'x' referenced before assignment
+[ Sabtu, 21 - 09 - 2019 | 13:23:34 ] list index out of range
+[ Kamis, 26 - 09 - 2019 | 00:59:46 ] name 'uself' is not defined
+[ Kamis, 26 - 09 - 2019 | 00:59:56 ] name 'uself' is not defined
+[ Kamis, 26 - 09 - 2019 | 01:01:41 ] name 'uself' is not defined
+[ Kamis, 26 - 09 - 2019 | 01:03:10 ] name 'uself' is not defined
+[ Kamis, 26 - 09 - 2019 | 01:03:15 ] name 'uself' is not defined
+[ Kamis, 26 - 09 - 2019 | 01:04:29 ] name 'uself' is not defined
+[ Kamis, 26 - 09 - 2019 | 01:04:38 ] name 'uself' is not defined
+[ Senin, 30 - 09 - 2019 | 17:40:16 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 30 - 09 - 2019 | 17:41:29 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 30 - 09 - 2019 | 17:42:14 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 30 - 09 - 2019 | 17:58:35 ] Invalid header value b'\n'
+[ Senin, 30 - 09 - 2019 | 18:02:33 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 30 - 09 - 2019 | 18:02:43 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 30 - 09 - 2019 | 18:03:42 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 30 - 09 - 2019 | 18:11:24 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 30 - 09 - 2019 | 18:12:15 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 30 - 09 - 2019 | 18:20:04 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 30 - 09 - 2019 | 18:20:33 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 30 - 09 - 2019 | 18:36:02 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 30 - 09 - 2019 | 18:36:14 ] TalkException(code=1, reason='Authentication Failed.', parameterMap=None)
+[ Selasa, 01 - Oktober - 2019 | 02:15:03 ] TalkException(code=10, reason='not a member', parameterMap={})
+[ Selasa, 01 - Oktober - 2019 | 12:09:25 ] TalkException(code=1, reason='Authentication Failed.', parameterMap=None)
+[ Selasa, 01 - Oktober - 2019 | 15:41:05 ] Invalid header value b'u6176020db7ba081d4c6bb9b3c7e35d60:aWF0OiAxNTQ0NDYwNDQ0MTI5Cg==..S0nxWt1dXop/B09mnEXv0fbwYhE=\n'
+[ Selasa, 01 - Oktober - 2019 | 16:17:25 ] list index out of range
+[ Jumat, 04 - Oktober - 2019 | 00:36:57 ] TalkException(code=73, reason='Prevented join by ticket: 1538768414, 914578447', parameterMap=None)
+[ Minggu, 06 - Oktober - 2019 | 00:20:39 ] TalkException(code=1, reason='Authentication Failed.', parameterMap=None)
+[ Senin, 07 - Oktober - 2019 | 03:20:53 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 07 - Oktober - 2019 | 03:21:50 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 07 - Oktober - 2019 | 03:22:15 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 07 - Oktober - 2019 | 03:23:33 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 07 - Oktober - 2019 | 03:32:47 ] TalkException(code=4, reason='too many groups', parameterMap=None)
+[ Senin, 07 - Oktober - 2019 | 03:34:07 ] TalkException(code=4, reason='too many groups', parameterMap=None)
+[ Senin, 07 - Oktober - 2019 | 03:35:23 ] 
+[ Senin, 07 - Oktober - 2019 | 04:03:59 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 07 - Oktober - 2019 | 04:04:41 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 07 - Oktober - 2019 | 04:05:26 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Senin, 07 - Oktober - 2019 | 04:12:19 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Selasa, 08 - Oktober - 2019 | 00:56:35 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Selasa, 08 - Oktober - 2019 | 00:57:23 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Selasa, 08 - Oktober - 2019 | 03:13:23 ] TalkException(code=73, reason='Prevented join by ticket: 1541490964, 920084963', parameterMap=None)
+[ Selasa, 08 - Oktober - 2019 | 03:13:53 ] TalkException(code=73, reason='Prevented join by ticket: 1541489256, 920084963', parameterMap=None)
+[ Selasa, 08 - Oktober - 2019 | 03:14:15 ] TalkException(code=73, reason='Prevented join by ticket: 1541487947, 920084963', parameterMap=None)
+[ Selasa, 08 - Oktober - 2019 | 03:15:25 ] TalkException(code=73, reason='Prevented join by ticket: 1541481104, 920084963', parameterMap=None)
+[ Selasa, 08 - Oktober - 2019 | 03:18:17 ] TalkException(code=1, reason='Authentication Failed.', parameterMap=None)
+[ Selasa, 08 - Oktober - 2019 | 03:21:38 ] list index out of range
+[ Selasa, 08 - Oktober - 2019 | 03:53:53 ] TalkException(code=1, reason='Authentication Failed.', parameterMap=None)
+[ Selasa, 08 - Oktober - 2019 | 04:10:51 ] TalkException(code=1, reason='Authentication Failed.', parameterMap=None)
+[ Selasa, 08 - Oktober - 2019 | 09:56:20 ] TalkException(code=5, reason='Ticket not found: SvxVBjce5o', parameterMap=None)
+[ Rabu, 09 - Oktober - 2019 | 05:07:26 ] list index out of range
+[ Kamis, 10 - Oktober - 2019 | 03:23:50 ] list index out of range
+[ Jumat, 11 - Oktober - 2019 | 20:06:25 ] 'LINE' object has no attribute 'replay'
+[ Jumat, 11 - Oktober - 2019 | 23:20:28 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Jumat, 11 - Oktober - 2019 | 23:20:55 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Jumat, 11 - Oktober - 2019 | 23:31:51 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Jumat, 11 - Oktober - 2019 | 23:32:01 ] TalkException(code=1, reason='Authentication Failed.', parameterMap=None)
+[ Jumat, 11 - Oktober - 2019 | 23:43:26 ] TalkException(code=1, reason='Authentication Failed.', parameterMap=None)
+[ Sabtu, 12 - Oktober - 2019 | 13:03:30 ] 'admins'
+[ Sabtu, 12 - Oktober - 2019 | 13:03:30 ] 'admins'
+[ Sabtu, 12 - Oktober - 2019 | 13:08:07 ] 'admins'
+[ Sabtu, 12 - Oktober - 2019 | 13:08:07 ] 'admins'
+[ Sabtu, 12 - Oktober - 2019 | 13:35:27 ] Invalid header value b'u8a1b5aaaecb9fe7937026541ba72230e:aWF0OiAxNTcwNjkwODM0MjUyCg==..pdELQAgtxAde/2KHT0xdKp/oe/o=\n'
+[ Sabtu, 12 - Oktober - 2019 | 19:29:04 ] TalkException(code=10, reason='not a member', parameterMap={})
+[ Sabtu, 12 - Oktober - 2019 | 20:24:52 ] list index out of range
+[ Sabtu, 12 - Oktober - 2019 | 20:30:57 ] list index out of range
+[ Sabtu, 12 - Oktober - 2019 | 20:45:32 ] TalkException(code=8, reason='Auth Failed', parameterMap=None)
+[ Sabtu, 12 - Oktober - 2019 | 20:55:30 ] list index out of range
+[ Sabtu, 12 - Oktober - 2019 | 21:01:19 ] list index out of range
+[ Sabtu, 12 - Oktober - 2019 | 21:14:01 ] Invalid header value b'u19e32a73821e1fb35298bb7a76c35cc2:aWF0OiAxNTcwNzAxMTEzNjUzCg==..Pn2vKg1nM97AcziW6K4rk1gsTrM=\n'
+[ Sabtu, 12 - Oktober - 2019 | 21:34:54 ] list index out of range
+[ Minggu, 13 - Oktober - 2019 | 06:55:27 ] list index out of range
