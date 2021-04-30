@@ -92,7 +92,7 @@ async function openOrders() {
 async function futuresTrades() {
     console.log(await client.futuresTrades({ symbol: 'ONEUSDT' }))
 }
-//futuresTrades()
+futuresTrades()
 
 async function futuresAllBookTickers() {
     console.log(await client.futuresAllBookTickers())
@@ -142,4 +142,4 @@ async function marketPrice() {
     console.log(await client.futuresMarkPrice('ONEUSDT'))
 }
 
-marketPrice()
+//marketPrice()
