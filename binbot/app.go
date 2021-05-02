@@ -8,9 +8,6 @@ import (
 	"github.com/adshao/go-binance/v2"
 )
 
-const APIKEY = "2k82QayDqeL36edeO3kkUPFTQrqGyICzPYRmw2cC3BHsSjteaIE0k2dcuGoyY4dU"
-const SECRITKEY = "tpwei5t7NOdvYJx1qhKlQ3VqZincxuo6NVg4jdGmo2kMrmhkwcvYoDrdeWp1mpJz"
-
 //client := binance.NewClient(APIKEY, SECRITKEY)
 
 func main() {
