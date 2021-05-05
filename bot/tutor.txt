@@ -1,7 +1,0 @@
-How to run ?
-
-./free token AppName YourMid
-
-example:
-
-./free ud443879d46cc138998a3b57xxxxxxxx:aWF0OiAxNTQ3OTQzNTIxMzY5Cg==..DF/IqJ7WpK0UFnxiCw6C37xxxx= "IOS 9.2.2 Iphone 7" udflsksfj2929jfkwfkfk
