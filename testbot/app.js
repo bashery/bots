@@ -1,22 +1,14 @@
 const Binance = require('node-binance-api');
 
+
+
 const binance = new Binance().options({
   APIKEY: apiKey,
   APISECRET: secretKey
 });
 
-async function prcs() {
-    console.info( await binance.futuresPrices() );
-}
-//prcs()
-
-async function balance() {
-    console.info( await binance.futuresBalance() );
-}
-//balance()
-let resp
-async function marketSell() {
-  resp = await binance.futuresMarketSell( 'ONEUSDT', 100 ) 
+async function futuresMarketSell() {
+  let resp = await binance.futuresMarketSell( 'ONEUSDT', 100 ) 
     console.info(resp);
 }
 //marketSell()
@@ -26,13 +18,27 @@ async function close() {
     else order = await binance.futuresMarketBuy( 'ONEUSDT', 100, {reduceOnly: true} )
     console.log(order)
 }
-//setTimeout(function(){close()}, 5000)
 
-// =========================================
 // ======== SPOT API ======================
-async function spotPrice() {
-    console.log("start spot")
-    let ticker = await binance.prices();
-    console.info(`spot Price : ${ticker.ONEUSDT}`);
+
+function marketSell() {
+    binance.marketSell("ONEUSDT", 89.9, function(resp) {
+        console.info(resp.body)
+    });
 }
-spotPrice()
+
+binance.websockets.trades(['ONEUSDT'], (trades) => {
+      //let {e:eventType, E:eventTime, s:symbol, p:price, q:quantity, m:maker, a:tradeId} = trades;
+      console.info("spot  : ", trades.p);
+});
+
+// stream futures
+function streamFutures(symbol) {
+    binance.futuresMarkPriceStream( symbol, function(data) {
+        // {eventType,eventTime, symbol, markPrice, indexPrice, fundingRate,fundingTime} = data;
+        console.log("future: ", data.markPrice), speed = '@100ms'
+    } );
+}
+streamFutures('oneusdt')
+
+
