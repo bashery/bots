@@ -4,9 +4,6 @@ const env = require('./env.js')
 console.log(env.apiKey)
 console.log(env.secretKey)
 
-//const apiKey = "mgQshVs9ivTOecnHmrfEEcTll2tBCPtfDYp3yG0N3YNYCDqCwnOQDDeElhH3TCfa";
-//const secretKey =  "ylwnuDM7tH9JxQfkjJtRxe8bDIKM4pUmiJnhIJq2b4Gmjf8p4cupWXFMoDHZU7MX"
-
 const binance = new Binance().options({
   APIKEY: env.apiKey,
   APISECRET: env.secretKey
