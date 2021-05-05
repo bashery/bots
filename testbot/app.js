@@ -1,6 +1,8 @@
 const Binance = require('node-binance-api');
 
 
+const apiKey = "mgQshVs9ivTOecnHmrfEEcTll2tBCPtfDYp3yG0N3YNYCDqCwnOQDDeElhH3TCfa";//"Hda2tpoITyid0UO2iGr3TiHQzKnkcfrY4ZEMddvl75WdT4CsGyBycHiL8LkyIBrF"
+const secretKey =  "ylwnuDM7tH9JxQfkjJtRxe8bDIKM4pUmiJnhIJq2b4Gmjf8p4cupWXFMoDHZU7MX"
 
 const binance = new Binance().options({
   APIKEY: apiKey,
@@ -27,18 +29,42 @@ function marketSell() {
     });
 }
 
+
+var tradePrice
+var futurePrice
+var isOpen = "" 
+
 binance.websockets.trades(['ONEUSDT'], (trades) => {
-      //let {e:eventType, E:eventTime, s:symbol, p:price, q:quantity, m:maker, a:tradeId} = trades;
-      console.info("spot  : ", trades.p);
+    //let {e:eventType, E:eventTime, s:symbol, p:price, q:quantity, m:maker, a:tradeId} = trades;
+    tradePrice =  trades.p
+    compar()
+    console.log("in spot")
+//  console.info("spot  : ", trades.p);
 });
 
 // stream futures
 function streamFutures(symbol) {
     binance.futuresMarkPriceStream( symbol, function(data) {
         // {eventType,eventTime, symbol, markPrice, indexPrice, fundingRate,fundingTime} = data;
-        console.log("future: ", data.markPrice), speed = '@100ms'
-    } );
+        futurePrice = data.markPrice
+//        console.log("future: ", data.markPrice), speed = '@100ms'
+        compar()
+        console.log("in futures")
+   } );
 }
 streamFutures('oneusdt')
 
 
+function compar() {
+    if ((futurePrice/1000) * 2 <= futurePrice-tradePrice && isOpen !== "opened") {
+        isOpen = "opened"
+        console.log("ocasion")
+        console.log(futurePrice, tradePrice)
+    }
+    if (futurePrice <= tradePrice && isOpen === "opened" ) {
+        isOpen = "closed"
+        console.log("not yet")
+        console.log(futurePrice, tradePrice)
+
+    }
+}
