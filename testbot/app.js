@@ -43,23 +43,36 @@ binance.websockets.trades(['ONEUSDT'], (trades) => {
 
 // stream futures
 function streamFutures(symbol) {
-    binance.futuresMarkPriceStream( symbol, function(data) {
+    binance.futuresMarkPriceStream('ONEUSDT', function(data) {
         // {eventType,eventTime, symbol, markPrice, indexPrice, fundingRate,fundingTime} = data;
         futurePrice = data.markPrice
-//        console.log("future: ", data.markPrice), speed = '@100ms'
+        speed = '@100ms'
         compar()
-   } );
+        //console.log(data)
+   }); 
 }
-streamFutures('oneusdt')
-
+streamFutures('ONEUSDT')
 
 function compar() {
+    //console.log(futurePrice, tradePrice)
     if ((futurePrice/1000) * 2 <= futurePrice-tradePrice && isOpen !== "opened") {
         isOpen = "opened"
-        console.log("opened with", futurePrice, tradePrice)
+        console.log("opened with : ", futurePrice, tradePrice)
     }
+
     if (futurePrice <= tradePrice && isOpen === "opened" ) {
         isOpen = "closed"
-        console.log("closed with", futurePrice, tradePrice)
+        console.log("close:", futurePrice, tradePrice)
     }
+
 }
+
+
+
+
+
+// clear screan
+function clear() {
+    setTimeout( function() {console.log('\033c');clear()}, 1000)
+}
+//clear()
