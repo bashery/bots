@@ -9,41 +9,51 @@ const binance = new Binance().options({
   APISECRET: env.secretKey
 });
 
-async function futuresMarketSell() {
-  let resp = await binance.futuresMarketSell( 'ONEUSDT', 100 ) 
+async function futuresMarketSell(symbol) {
+  let resp = await binance.futuresMarketSell( symbol, 100 ) 
     console.info(resp);
 }
 //marketSell()
 
-async function close() {
+async function close(symbol) {
     if ( resp.side == 'LONG' ) order = await binance.futuresMarketSell( 'ONEUSDT', 100, {reduceOnly: true} )
-    else order = await binance.futuresMarketBuy( 'ONEUSDT', 100, {reduceOnly: true} )
+    else order = await binance.futuresMarketBuy( symbol, 100, {reduceOnly: true} )
     console.log(order)
 }
 
 // ======== SPOT API ======================
 
-function marketSell() {
-    binance.marketSell("ONEUSDT", 89.9, function(resp) {
+function marketSell(symbol, size) {
+    binance.marketSell(symbol, size, function(resp) {
         console.info(resp.body)
     });
 }
+
+function marketBuy(symbol, size) {
+    binance.marketSell(symbol, size, function(resp) {
+        console.info(resp.body)
+    });
+}
+
+
 
 
 var tradePrice
 var futurePrice
 var isOpen = "" 
 
-binance.websockets.trades(['ONEUSDT'], (trades) => {
+binance.websockets.trades(['ONEUSDT'], function(trades) {
     //let {e:eventType, E:eventTime, s:symbol, p:price, q:quantity, m:maker, a:tradeId} = trades;
     tradePrice =  trades.p
     compar()
 //  console.info("spot  : ", trades.p);
 });
 
+//streamTrade()
 // stream futures
+
 function streamFutures(symbol) {
-    binance.futuresMarkPriceStream('ONEUSDT', function(data) {
+    binance.futuresMarkPriceStream(symbol, function(data) {
         // {eventType,eventTime, symbol, markPrice, indexPrice, fundingRate,fundingTime} = data;
         futurePrice = data.markPrice
         speed = '@100ms'
@@ -55,7 +65,7 @@ streamFutures('ONEUSDT')
 
 function compar() {
     //console.log(futurePrice, tradePrice)
-    if ((futurePrice/1000) * 2 <= futurePrice-tradePrice && isOpen !== "opened") {
+    if ((futurePrice/1000) * 3 <= futurePrice-tradePrice && isOpen !== "opened") {
         isOpen = "opened"
         console.log("opened with : ", futurePrice, tradePrice)
     }
@@ -64,15 +74,6 @@ function compar() {
         isOpen = "closed"
         console.log("close:", futurePrice, tradePrice)
     }
-
 }
 
 
-
-
-
-// clear screan
-function clear() {
-    setTimeout( function() {console.log('\033c');clear()}, 1000)
-}
-//clear()
