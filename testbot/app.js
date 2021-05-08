@@ -65,7 +65,7 @@ streamFutures('ONEUSDT')
 
 function compar() {
     //console.log(futurePrice, tradePrice)
-    if ((futurePrice/1000) * 3 <= futurePrice-tradePrice && isOpen !== "opened") {
+    if ((futurePrice/1000) * 5 <= futurePrice-tradePrice && isOpen !== "opened") {
         isOpen = "opened"
         console.log("opened with : ", futurePrice, tradePrice)
     }
