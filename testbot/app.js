@@ -1,25 +1,29 @@
 const Binance = require('node-binance-api');
+const helper = require('./helper.js');
 const env = require('./env.js')
 
-console.log(env.apiKey)
-console.log(env.secretKey)
+//console.log(env.apiKey); console.log(env.secretKey)
 
 const binance = new Binance().options({
-  APIKEY: env.apiKey,
-  APISECRET: env.secretKey
+    APIKEY: env.hamzaKey,
+  APISECRET:env.hamzaSecret
 });
 
-async function futuresMarketSell(symbol) {
-  let resp = await binance.futuresMarketSell( symbol, 100 ) 
-    console.info(resp);
-}
-//marketSell()
 
-async function close(symbol) {
-    if ( resp.side == 'LONG' ) order = await binance.futuresMarketSell( 'ONEUSDT', 100, {reduceOnly: true} )
-    else order = await binance.futuresMarketBuy( symbol, 100, {reduceOnly: true} )
+var resp
+async function futuresMarketSell(symbol, size) {
+  resp = await binance.futuresMarketSell( symbol, size ) 
+  console.info(resp);
+}
+
+//futuresMarketSell('ONEUSDT', 120)
+
+async function close(symbol, size) {
+    if ( resp.side == 'LONG' ) order = await binance.futuresMarketSell( 'ONEUSDT', size, {reduceOnly: true} )
+    else order = await binance.futuresMarketBuy( symbol, size, {reduceOnly: true} )
     console.log(order)
 }
+//setTimeout(function(){close('ONEUSDT', 120)}, 4000)
 
 // ======== SPOT API ======================
 
@@ -35,20 +39,23 @@ function marketBuy(symbol, size) {
     });
 }
 
-
+marketBuy('ONEUSDT', 180)
+setTimeout(function(){
+    marketSell('ONEUSDT',180)
+}, 4000)
 
 
 var tradePrice
 var futurePrice
 var isOpen = "" 
 
-binance.websockets.trades(['ONEUSDT'], function(trades) {
+/* binance.websockets.trades(['ONEUSDT'], function(trades) {
     //let {e:eventType, E:eventTime, s:symbol, p:price, q:quantity, m:maker, a:tradeId} = trades;
     tradePrice =  trades.p
     compar()
 //  console.info("spot  : ", trades.p);
 });
-
+*/
 //streamTrade()
 // stream futures
 
@@ -61,18 +68,21 @@ function streamFutures(symbol) {
         //console.log(data)
    }); 
 }
-streamFutures('ONEUSDT')
+//streamFutures('ONEUSDT')
 
 function compar() {
     //console.log(futurePrice, tradePrice)
-    if ((futurePrice/1000) * 5 <= futurePrice-tradePrice && isOpen !== "opened") {
+    if ((futurePrice/1000) * 2 <= futurePrice-tradePrice && isOpen !== "opened") {
         isOpen = "opened"
         console.log("opened with : ", futurePrice, tradePrice)
+        helper.execute('espeak "hello, the deal is opened with future price:"'+futurePrice+", and trade price:"+tradePrice)
+
     }
 
     if (futurePrice <= tradePrice && isOpen === "opened" ) {
         isOpen = "closed"
         console.log("close:", futurePrice, tradePrice)
+        helper.execute('espeak "hello, the deal is closed with future price:"'+futurePrice+", and trade price:"+tradePrice)
     }
 }
 
